@@ -1,16 +1,15 @@
 
+
 # Project configuration
 data:
   raw_path: data/raw/survey.csv
-  processed_path: data/processed/
+  processed_path: data/processed/mental_health_cleaned.csv
   output_path: outputs/
 
-model:
-  type: RandomForestClassifier
-  parameters:
-    n_estimators: 100
-    max_depth: 10
-    random_state: 42
+models:
+  logistic_regression: models/logistic_regression_model.pkl
+  random_forest: models/random_forest_model.pkl
+  xgboost: models/xgboost_model.pkl
 
 train:
   test_size: 0.2
@@ -18,3 +17,8 @@ train:
 
 explainability:
   method: shap
+  shap_summary: outputs/figures/shap_summary_xgb.png
+
+dashboard:
+  notebook_path: notebooks/dashboard.ipynb
+  default_model: xgb_clf

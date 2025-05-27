@@ -5,4 +5,12 @@ matplotlib
 seaborn
 jupyter
 shap
-flask
+plotly
+dash
+pyyaml
+
+# For interactive dashboard and notebook support
+ipykernel
+
+# For compatibility and warnings
+packaging
