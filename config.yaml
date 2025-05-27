@@ -1,0 +1,20 @@
+
+# Project configuration
+data:
+  raw_path: data/raw/survey.csv
+  processed_path: data/processed/
+  output_path: outputs/
+
+model:
+  type: RandomForestClassifier
+  parameters:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+
+train:
+  test_size: 0.2
+  random_state: 42
+
+explainability:
+  method: shap
